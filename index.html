@@ -226,34 +226,7 @@ header p.subtext::before {
 
 
 
-    /* Highlighting for "About" Section */
-    #about-section {
-      background-color: #FFD700;
-      /* Yellow highlight background color */
-      color: #800000;
-      /* Maroon highlight text color */
-      padding: 6px;
-      /* Highlight padding */
-      border-radius: 10px;
-      /* Rounded corners for the highlight */
-      margin: 20px 0;
-      /* Add margin to separate from other content */
-      transition: background-color 0.3s ease;
-      box-shadow: 0 0 20px rgba(128, 0, 0, 0.5);
-    }
-
-    /* Reset Link Styles for "About" Section */
-    #about-section a {
-      color: #000;
-      /* Reset link color to match highlight text color */
-      box-shadow: 0 0 30px #ecff19
-    }
-
-    #about-section a:hover {
-      text-decoration: underline;
-      /* Add underline effect on hover */
-      box-shadow: 0 0 30px #ecff19
-    }
+   
 
     .button {
       display: inline-block;
@@ -566,6 +539,73 @@ header p.subtext::before {
   display: none;
 }
 
+#about-section {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Heading styles */
+#about-section h2 {
+    font-size: 28px;
+    color: #800000;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Paragraph styles */
+#about-section p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+/* List styles */
+#about-section ul, #about-section ol {
+    margin-left: 20px;
+}
+
+#about-section li {
+    margin-bottom: 5px;
+}
+
+/* Link styles */
+#about-section a {
+    color: #800000;
+    text-decoration: underline;
+}
+
+/* Organizing Team styles */
+#about-section h2 + ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#about-section li + p {
+    margin-top: 5px;
+}
+
+/* Highlighted text styles */
+strong {
+    color: #800000;
+}
+
+
+
+
   </style>
 
 </head>
@@ -582,16 +622,210 @@ header p.subtext::before {
           <p class="hosted-by">Hosted by MUIT Lucknow</p>
           <p class="subtext">Exploring the Future of Technology</p>
         </div>
-      </nav>
+      </nav><br>
       <ul>
-        <li><a href="#about" id="about-section">About</a></li>
+        <li><a href="javascript:void(0);" onclick="hideAbout()"  >Home</a></li>
+        <li><a href="javascript:void(0);" onclick="toggleAboutSection()">About</a></li>
         <li><a
             href="https://docs.google.com/forms/d/e/1FAIpQLSd79AOy8gu9URCsd5h1k6K4TknLa-TVWIh_bu5zMFyNCTGGug/viewform?usp=sf_link"
             target="_blank">Registration</a></li>
       </ul>
+      
+      <br>
     </div>
   </header>
+  <div id="about-section">
+    <h2>About the Maharishi Startup – “Hackathon 2.0” - 2023</h2>
+    <p>
+        The Maharishi Startup Hackathon is a program where students get a chance to solve everyday
+        problems and come up with new ideas for products. It helps them become more creative and better
+        at solving problems. In the "Hackathon 2.0" in 2023, students will work on challenges and provide
+        solutions.
+        This event takes place during the Maharishi Startup Mela 2023. It's a fast-paced competition that
+        lasts for 8 hours and includes various challenges. Students from different colleges will participate
+        and compete to become innovators or entrepreneurs. The event has two parts: one focuses on
+        hardware, and the other on software.
+    </p>
+    <h2>Objectives of Events:</h2>
+    <ul style="list-style-type: square;">
+        <li>Foster Innovation Culture: Cultivate a culture of innovation among students through real-world problem-solving.</li>
+        <li>Problem-Solving Mindset: Develop critical thinking and problem-solving skills among participants.</li>
+        <li>Promote Entrepreneurship: Inspire entrepreneurship by encouraging innovative solutions to challenges.</li>
+        <li>Intercollegiate Competition: Facilitate healthy competition and networking among students from different colleges.</li>
+        <li>Multidisciplinary Collaboration: Encourage diverse perspectives and holistic problem-solving by organizing both hardware and software sections.</li>
+    </ul>
+    <h2>Participating Process of events:</h2>
+    <ol>
+        <li>
+            <strong>Registration:</strong>
+        </li>
+        <p>Visit the official registration portal for the hackathon. Complete the registration form with personal and contact information.</p>
 
+        <li>
+            <strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSd79AOy8gu9URCsd5h1k6K4TknLa-TVWIh_bu5zMFyNCTGGug/viewform?usp=sf_link" target="_blank" style="color: blue; text-decoration: underline;">Registration</a></strong>
+        </li>
+
+        <li>
+            <strong>Team Formation (if required):</strong>
+        </li>
+
+        <p>If participating as a team, form a group of students with complementary skills. Ensure all team members are registered individually.</p>
+
+        <li>
+            <strong>Review Problem Statements:</strong>
+        </li>
+
+        <p>Explore the list of problem statements or challenges provided by the organizers. Choose a problem statement that interests you or aligns with your skills and expertise.</p>
+
+        <li>
+            <strong>Prepare for the Hackathon:</strong>
+        </li>
+
+        <p>Familiarize yourself with the rules, guidelines, and event schedule. Gather any necessary hardware, software, or materials in advance.</p>
+
+        <li>
+            <strong>Attend the Hackathon:</strong>
+        </li>
+
+        <p>On the scheduled date and venue, arrive at the hackathon event location. Attend the kick-off event to receive instructions and guidelines.</p>
+
+        <li>
+            <strong>Prepare Presentation:</strong>
+        </li>
+
+        <p>Create a presentation to showcase your solution. Include details about your approach, innovation, and how your solution addresses the problem statement.</p>
+
+        <li>
+            <strong>Project Presentation:</strong>
+        </li>
+
+        <p>During the presentation phase, present your solution to judges and the audience. Be prepared to answer questions and receive feedback.</p>
+
+        <li>
+            <strong>Award Ceremony:</strong>
+        </li>
+
+        <p>Attend the award ceremony to find out if your project has been recognized as a winning solution. Celebrate your achievements and receive any prizes or certificates.</p>
+
+        <li>
+            <strong>Post-Event Activities:</strong>
+        </li>
+
+        <p>Consider further development or implementation of your project beyond the hackathon. Network with other participants, mentors, and organizers for potential opportunities.</p>
+    </ol>
+    <h2>Rules and Regulations of MUIT HACKATHON 2023</h2>
+    <ol>
+        <li>
+            <h3>Registration for HACKATHON 2023</h3>
+            <p>Registration of teams must be done by a Team Leader only. The registration process is simple. All you need to do is:</p>
+            <ol type="a">
+                <li>Visit <a href="https://forms.gle/8CVGC2vfjBhhWn236" target="_blank">https://forms.gle/8CVGC2vfjBhhWn236</a></li>
+                <li>Fill in all the required details.</li>
+                <li>Prepare a presentation after selecting the problem statement.</li>
+                <li>Don’t forget to click ‘Submit’. You have been successfully registered.</li>
+            </ol>
+        </li>
+        <li>
+            <h3>Team Formation Rules</h3>
+            <ul>
+                <li>Each team would comprise 2 to 6 members (including a team leader) with 1 team mentor (optional but recommended).</li>
+                <li>Team members could be from different institutions as well. Make sure you have the proper ID card for reference.</li>
+                <li>Teams should be made up exclusively of students who are not organizers, Hackathon team.</li>
+                <li>Teams must submit their project work on the theme as mentioned above only.</li>
+                <li>No plagiarism/copy-paste will be entertained; if found, the teams will directly be disqualified from the hackathon.</li>
+                <li>The hackathon begins on [Date], at [Time] and ends on [Date] and [Time].</li>
+                <li>The team must be registered for MUIT HACKATHON 2023 via Google forms provided to submit the hackathon.</li>
+                <li>Unregistered teams will not be entertained in any case.</li>
+                <li>The registered teams have to attend the introductory session via meet (details and link will be shared with the registered teams via emails).</li>
+                <li>The hackathon will be live just after the introductory sessions.</li>
+                <li>The submission form link will be shared with the registered teams, and the submission of PPT and other required files must be uploaded in the submission form.</li>
+                <li>Only one person in the team would be the team leader, who must register on behalf of all the members.</li>
+                <li>The PPT (4-5 Slides) of the idea and project link/application/software link for the hackathon should be submitted on the form provided along with all the mandatory details.</li>
+                <li>All the details should be provided in the prescribed format; otherwise, they are bound to get rejected.</li>
+                <li>Teams that have not submitted the hackathon will be automatically disqualified.</li>
+                <li>Already implemented hackathons can be used, but extra points will be given to original and innovative hackathons.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Selection Criteria and Follow-ups</h3>
+            <ul>
+                <li>Evaluation criteria will include novelty of the hackathon, complexity, clarity, and details in the prescribed format, feasibility, practicability, sustainability, the scale of impact, user experience, and potential for future work progression.</li>
+                <li>Results of the Hackathon will be declared on [Date]. Results will be displayed on the website (link will be shared soon), and the shortlisted teams will be notified via email.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>General Hackathon Rules</h3>
+            <ul>
+                <li>All work on a project should be done during the Hackathon. Your code repository must be initialized at the beginning of the Hackathon itself.</li>
+                <li>Teams can use libraries, frameworks, or open-source code in their projects. Working on a project before the event and open-sourcing it for the sole purpose of using the code during the event is against the spirit of the rules and is not allowed.</li>
+                <li>Teams must stop once the time is up. However, teams can debug and make minor fixes to their programs after the time is up.</li>
+                <li>Teams can be disqualified from the competition at the organizers’ discretion. Reasons might include but are not limited to breaking the Competition Rules, the Code of Conduct, or other unsporting behavior.</li>
+                <li>Hackathon Judging Criteria and presentation rules will be disclosed an hour before the Hackathon begins.</li>
+                <li>Valid bank account details must be provided when asked for the prize money to get processed. Regular processing time is applicable for the prize money to get processed.</li>
+                <li>In case of discrepancies, the final take shall lie with the organizers.</li>
+                <li>Last date of confirmation of participation by selected teams - Will be announced later</li>
+                <li>Last date of declaration of shortlisted candidates - Will be announced later</li>
+            </ul>
+        </li>
+    </ol>
+    <h2>Judging Criteria:</h2>
+    <ol>
+        <li>
+            <strong>Design & Implementation:</strong>
+        </li>
+        <p>Does it work? Is it implementable? Did the team think about the user interface (UI) and user experience (UX)? Was the product designed with humans in mind?</p>
+
+        <li>
+            <strong>Innovation:</strong>
+        </li>
+        <p>How innovative/creative/unique is the idea? Was there a novel approach applied to solve the problem?</p>
+
+        <li>
+            <strong>Technical Complexity:</strong>
+        </li>
+        <p>Is the project technically impressive? Complex? How technically sophisticated/advanced/elegant was the solution?</p>
+
+        <li>
+            <strong>Social Impact:</strong>
+        </li>
+        <p>How impactful is the idea? Can it impact the lives of many people in a significant way? Is the idea aligned with and addresses any of the UN Sustainable Development Goals?</p>
+
+        <li>
+            <strong>Commercial Viability:</strong>
+        </li>
+        <p>Is there a business potential? How original is the business model? Has the team considered a route to market and made proactive actions to execute an action plan? Is the idea feasible, does it have economic and societal value, and is it sustainable?</p>
+    </ol>
+
+    <h2>Outcomes of Event</h2>
+    <ul>
+        <li> <strong> Innovative Solutions: </strong></li>
+        <p>Participants generate innovative solutions to pressing real-world problems.</p>
+
+        <li> <strong>Entrepreneurial Ventures: </strong></li>
+        <p>Some participants may embark on entrepreneurial journeys based on their hackathon projects.</p>
+
+        <li> <strong>Skill Enhancement: </strong></li>
+        <p>Students enhance their critical thinking, problem-solving, and collaboration skills.</p>
+
+        <li> <strong>Networking Opportunities: </strong></li>
+        <p>Participants establish valuable connections with peers and industry professionals.</p>
+
+        <li> <strong>Cross-Disciplinary Insights: </strong></li>
+        <p>The event fosters cross-disciplinary insights and approaches to problem-solving.</p>
+    </ul>
+
+    <h2>Organizing Team</h2>
+    <ul>
+        <li><span style="font-weight: bold;">Mr. Puneet Pandey</span></li>
+        <p style="text-align: center; color: #000000;;">Manager, MIIF</p>
+        <li><span style="font-weight: bold;">Dr. Rakesh Kumar Yadav</span></li>
+        <p style="text-align: center; color: #000000;">Convenor, MIIF Member</p>
+        <li><span style="font-weight: bold;">Ms. Ankita Agrawal</span></li>
+        <p style="text-align: center; color: #000000;">Co-ordinator</p>
+        <li><span style="font-weight: bold;">Ms. Preeti Naval</span></li>
+        <p style="text-align: center; color: #000000;">Co-ordinator</p>
+    </ul>
+</div>
 
 
   <div class="container">
@@ -607,8 +841,6 @@ header p.subtext::before {
         </div>
 
         <div class="step">
-
-
 
           <p class="step-description">2.After registering, prepare your presentation based on the selected problem
             statement.</p><br>
@@ -792,7 +1024,32 @@ header p.subtext::before {
         </li>
       </ul>
     </div>
+    
+ 
   </div>
+
+  <div  class="organizing-team" style="background-color: #fff5cf; padding: 10px;">
+    <h2 style="color: #600000 ;">Organizing Team</h2>
+    <ul>
+      <li>
+        <strong>Mr. Puneet Pandey</strong><br>
+        Manager, MIIF
+      </li>
+      <li>
+        <strong>Dr. Rakesh Kumar Yadav</strong><br>
+        Convenor, MIIF Member
+      </li>
+      <li>
+        <strong>Ms. Ankita Agrawal</strong><br>
+        Co-ordinator
+      </li>
+      <li>
+        <strong>Ms. Preeti Naval</strong><br>
+        Co-ordinator
+      </li>
+    </ul>
+  </div>
+
 </div>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -852,6 +1109,23 @@ header p.subtext::before {
 
   // Add an event listener to call the showPageWhenImagesLoaded function
   window.addEventListener("load", showPageWhenImagesLoaded);
+
+
+  function toggleAboutSection() {
+  var aboutSection = document.getElementById('about-section');
+  if (aboutSection.style.display === 'none' || aboutSection.style.display === '') {
+    aboutSection.style.display = 'block';
+  } else {
+    aboutSection.style.display = 'none';
+  }
+}
+
+function hideAbout () {
+  var aboutSection = document.getElementById('about-section');
+  if (aboutSection.style.display === 'block' || aboutSection.style.display === '') {
+    aboutSection.style.display = 'none';
+  } 
+}
 
   </script>
 
