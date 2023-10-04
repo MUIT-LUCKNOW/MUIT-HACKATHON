@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUIT Hackathon 2k23</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #fff;
+      /* White background color */
+      color: #000;
+      /* Black text color */
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+
+      background-image: url('https://drive.google.com/uc?id=1v0rbz04WLCxxC9FzyLsBp_HW5ivS0FqR');
+   
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+    }
+
+
+
+    header {
+      background-color: #800000;
+      /* Maroon background color */
+      color: #fff;
+      /* White text color */
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    header p.subtext {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  background: radial-gradient(circle, #cc2fd4, #000000); /* Gradient from orange to red */
+border-radius: 10px;
+}
+
+/* Text shadow for added depth and beauty */
+header p.subtext::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  z-index: -1;
+  border-radius: 10px; /* Match the border-radius above */
+}
+
+
+
+
+    header ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    header ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    header ul li:last-child {
+      margin-right: 0;
+    }
+
+    header ul li a {
+      color: #19f845;
+      text-decoration: none;
+      background-color: rgb(183, 0, 219);
+      transition: background-color 0.3s ease;
+
+    }
+
+    header ul li a:hover {
+      text-decoration: underline;
+      background-color: #36f85d;
+      color: rgb(183, 0, 219);
+      box-shadow: 0 0 30px #19f845;
+
+    }
+
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      /* Arrange children in a column */
+      align-items: center;
+      justify-content: center;
+      opacity: 0.88;
+      background-color: #ffea9e;
+
+
+
+
+    }
+
+    .content {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #800000;
+      /* Maroon background color */
+      color: #fff;
+      /* White text color */
+      padding: 10px 0;
+      text-align: center;
+      transition: background-color 0.3s ease;
+      /* Smooth background color transition */
+    }
+
+    header:hover {
+      background-color: #600000;
+      /* Darker maroon background color on hover */
+    }
+
+    .container {
+
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      /* Arrange children in a column */
+      align-items: center;
+      justify-content: center;
+      opacity: 0.84;
+      background-color: #fff5cf;
+
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+      border-radius: 50%;
+      /* Make the logo circular */
+      transition: transform 0.3s ease;
+      /* Add a subtle scaling effect on hover */
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+      /* Slightly scale up the logo on hover */
+    }
+
+
+
+    .header-info {
+      text-align: center;
+    }
+
+    /* Neon Glow Effect for Links */
+    ul li a {
+      display: inline-block;
+      position: relative;
+      background-color: transparent;
+      /* Transparent background */
+      color: #FFD700;
+      /* Yellow text color */
+      padding: 10px 20px;
+      /* Padding adjustments */
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      /* Rounded corners */
+      transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+      /* Smooth transitions */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      /* Subtle shadow */
+    }
+
+    ul li a:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #FFD700, #800000);
+      /* Neon-style gradient */
+      border-radius: 30px;
+      /* Match button's border-radius */
+      z-index: -1;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    ul li a:hover:before {
+      opacity: 1;
+      /* Show the neon glow on hover */
+    }
+
+
+
+    /* Highlighting for "About" Section */
+    #about-section {
+      background-color: #FFD700;
+      /* Yellow highlight background color */
+      color: #800000;
+      /* Maroon highlight text color */
+      padding: 6px;
+      /* Highlight padding */
+      border-radius: 10px;
+      /* Rounded corners for the highlight */
+      margin: 20px 0;
+      /* Add margin to separate from other content */
+      transition: background-color 0.3s ease;
+      box-shadow: 0 0 20px rgba(128, 0, 0, 0.5);
+    }
+
+    /* Reset Link Styles for "About" Section */
+    #about-section a {
+      color: #000;
+      /* Reset link color to match highlight text color */
+      box-shadow: 0 0 30px #ecff19
+    }
+
+    #about-section a:hover {
+      text-decoration: underline;
+      /* Add underline effect on hover */
+      box-shadow: 0 0 30px #ecff19
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #FFD700;
+      /* Yellow background color */
+      color: #fff;
+      /* White text color */
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 0 20px rgba(255, 237, 35, 0.945);
+    }
+
+    .button:hover {
+      background-color: #ffffff;
+      /* Darker maroon background color on hover */
+      color: #800000;
+      /* White text color */
+      box-shadow: 0 0 30px #800000;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #fff;
+    }
+
+    h3 {
+      font-size: 20px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 16px;
+      color: yellow;
+      margin: 10px 0;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+   /* Styles for the problem statement */
+.problem-statement {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 4px solid #FFD700; /* Yellow border */
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Styles for the problem statement when hovered */
+.problem-statement:hover {
+  background-color: #ffcc3f; /* Maroon background color on hover */
+  box-shadow: 0 0 20px #ffdd34; /* Yellow box shadow on hover */
+  border: 4px solid #b11111;
+  transform: scale(1.03);
+  
+}
+
+/* Styles for the problem statement in expanded state */
+.problem-statement.expanded {
+  background-color: #800000; /* Maroon background color */
+  color: #fff; /* Text color */
+  border: 2px solid #fff; /* White border */
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(128, 0, 0, 0.5); /* Maroon box shadow */
+}
+
+/* Styles for the hidden problem description */
+.problem-description {
+  display: none;
+  margin-top: 10px;
+  color: #fff; /* Text color */
+}
+
+/* Styles for the problem description when problem statement is active */
+.problem-statement.active .problem-description {
+  display: block;
+  
+}
+
+/* Downward-pointing arrow symbol when hovering over the problem statement */
+.problem-statement:hover::after {
+  content: "\2193"; /* Unicode character for a downward-pointing triangle */
+  display: inline-block;
+  margin-left: 5px; /* Adjust the margin as needed */
+  font-weight: bolder;
+  
+}
+
+
+    /* Neon styles */
+    .neon-text {
+      font-size: 28px;
+      color: #a01e1e;
+      /* White text color */
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+      /* Yellow neon glow */
+      animation: neon-animation 1.5s linear infinite alternate;
+      background-color: antiquewhite;
+
+      padding: 10px;
+    }
+
+    @keyframes neon-animation {
+      0% {
+        text-shadow: 0 0 2px #ffffff, 0 0 6px #ffffff, 0 0 10px #ffffff;
+        /* Yellow neon glow */
+      }
+
+      100% {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+        /* Yellow neon glow */
+      }
+    }
+
+    /* Arrow styles */
+    .arrow {
+      font-size: 36px;
+      color: #2cff56;
+      /* White text color */
+      transform: rotate(0deg);
+      text-shadow: 0 0 10px #2cff56;
+
+    }
+
+    @keyframes neon-arrow-animation {
+      0% {
+        text-shadow: 0 0 10px #2cff56, 0 0 10px #2cff56, 0 0 20px #2cff56;
+      }
+
+      100% {
+        text-shadow: 0 0 20px #2cff56, 0 0 20px #2cff56, 0 0 30px #2cff56;
+      }
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+
+      .button {
+        font-size: 14px;
+      }
+
+      .problem-statement {
+        padding: 10px;
+      }
+
+
+    }
+
+
+
+    .custom-link-button {
+      background-color: #ff0000;
+      /* Maroon background color */
+      color: #fff;
+      /* White text color */
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 0 20px #ff0606;
+    }
+
+    .custom-link-button:hover {
+      background-color: #fff;
+      /* White background color on hover */
+      color: #ff0000;
+      /* Maroon text color on hover */
+      box-shadow: 0 0 30px #ff0000;
+    }
+
+    /* CSS for the logo and text alignment */
+    .logo-container {
+      display: flex;
+      /* Use flexbox for alignment */
+      align-items: center;
+      /* Center vertically */
+    }
+
+    .logo {
+      width: 50px;
+      /* Adjust the width to your preferred size */
+      height: auto;
+      /* Maintain aspect ratio */
+      margin-right: 10px;
+      /* Add some spacing between the logo and text */
+    }
+
+    .step {
+      margin-bottom: 20px;
+      padding: 15px;
+      color: #000;
+      background-color: #fff;
+      /* White background color */
+      border: 2px solid #800000;
+      /* Maroon border */
+      border-radius: 5px;
+      transition: transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease;
+      /* Add transitions */
+      opacity: 1;
+    }
+
+    .step:hover {
+      transform: scale(1.05);
+      background-color: #fff;
+      /* White background color on hover */
+      box-shadow: 0 0 30px #800000;
+      /* Maroon box shadow on hover */
+      color: #800000;
+      /* Maroon text color on hover */
+
+    }
+
+    .step-description {
+      margin-top: 5px;
+      color: #800000;
+
+    }
+
+    .container-header {
+
+      background-color: #fff942;
+      opacity: 0.9;
+       background-image: url('https://drive.google.com/uc?id=1F215kw8sdib52IqigweJs2GCtDJWfFAP');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+
+
+    }
+
+    .subtext-next {
+
+      color: #fff823;
+      box-shadow: #800000;
+      font-size: 20px;
+      background-color: #8b1414;
+      border-radius: 6px;
+      padding: 6px;
+    
+
+
+    }
+
+    #title-statement {
+
+      color: #800000;
+
+    }
+
+
+    /* Keyframes for neon blinking and flashing effect */
+    @keyframes neonBlink {
+      0% {
+        text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+      }
+
+      25% {
+        text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
+      }
+
+      50% {
+        text-shadow: 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow;
+      }
+
+      75% {
+        text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
+      }
+
+      100% {
+        text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+      }
+    }
+
+    /* Apply the neon blinking and flashing animation */
+    .hosted-by {
+   
+      background-color: hsl(351, 85%, 29%);
+      animation: neonBlink 1s linear infinite;
+      font-size: 22px;
+      padding: 10px 30px;
+      font-weight: bolder;
+
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+   
+
+
+
+
+    }
+
+    #page-container {
+  display: none;
+}
+
+  </style>
+
+</head>
+<div id="page-container">
+<body>
+  <header>
+  
+    <div class="container-header">
+      <nav>
+        <img src="https://drive.google.com/uc?id=1YceOs23FLop1Mh62SlmcL5nKBzAhLhK8" alt="MUIT Hackathon Logo"
+          class="logo" width="100" height="100">
+        <h1 class="neon-text">MUIT HACKATHON 2k23</h1>
+        <div class="header-info">
+          <p class="hosted-by">Hosted by MUIT Lucknow</p>
+          <p class="subtext">Exploring the Future of Technology</p>
+        </div>
+      </nav>
+      <ul>
+        <li><a href="#about" id="about-section">About</a></li>
+        <li><a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd79AOy8gu9URCsd5h1k6K4TknLa-TVWIh_bu5zMFyNCTGGug/viewform?usp=sf_link"
+            target="_blank">Registration</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+
+  <div class="container">
+    <div class="content">
+      <h2 style="color: #800000;">Hackathon!</h2>
+      <p class="subtext-next">Join us in a journey to explore cutting-edge technology.</p>
+
+      <h3 style="color: #600000;">Registration Instructions:</h3>
+      <div class="steps">
+        <div class="step">
+          <p class="step-description">1.Select a problem statement from the list below.</p>
+          <i class="arrow fas fa-arrow-down"></i><br>
+        </div>
+
+        <div class="step">
+
+
+
+          <p class="step-description">2.After registering, prepare your presentation based on the selected problem
+            statement.</p><br>
+          <a href="https://drive.google.com/file/d/1GL-TfKbALf-w-z0owX0GEc7BJ8yUtgTa/view?usp=drive_link"
+            target="_blank" download="example.pptx" class="custom-link-button">Example PowerPoint</a><br><br>
+          <i class="arrow fas fa-arrow-down"></i><br>
+        </div>
+
+        <div class="step">
+          <p class="step-description">3.Click on the "Register Now" button to fill out the registration form.</p><br>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd79AOy8gu9URCsd5h1k6K4TknLa-TVWIh_bu5zMFyNCTGGug/viewform?usp=sf_link"
+            target="_blank" class="button">Register Now</a><br>
+          <br>
+          <i class="arrow fas fa-arrow-down"></i>
+        </div>
+
+        <div class="step">
+          <p class="step-description">4.Upload your presentation using the provided instructions in the registration
+            form.</p>
+
+        </div>
+      </div>
+
+
+      <h3 id="title-statement">List of Problem Statements:</h3>
+      <ul>
+        <li class="problem-statement">
+          <strong>Problem Statement 1: Smarter Surveillance System</strong>
+          <div class="problem-description">
+            <p><strong>PS (Prelims):</strong> At present, a lot of man hours are spent on physical patrolling of
+              border areas and compounds. Fencing wires are not reliable and easy to breach, in large areas it
+              is difficult to be available at all locations, and if someone is breaching in absence of guard,
+              guard will know only when they reach the breach site. Also, it takes a lot of time to cover the
+              compound walls if the area is large.</p>
+            <p><strong>PS (Mains) Extension:</strong> [Add the extension description for the main round here, if
+              applicable]</p>
+            <p><strong>Expectation:</strong> Develop a Technology that can address this issue partially or
+              completely. The users of this system are two-fold: Any Security agency who is securing a larger
+              area can install an unmanned area and can track through a single control room.</p>
+            <div class="expand-indicator">▼</div>
+        </li>
+
+        <li class="problem-statement">
+          <strong>Problem Statement 2: Drone Technology</strong>
+          <div class="problem-description">
+            <p>PS (Prelims): Developing heavy lift drone which will be able to deliver relief material, food
+              packets & other things in a disaster hit area or remote area at the earliest. Can be helpful in
+              emergency situations. Students can either give computer simulation regarding the load capacity
+              or a physical model.</p>
+            <p>PS (Mains) Extension: Developing drone jammers which could block and work on interfering with
+              GPS, Radio signals for the same. It should make the drone redundant. Identification of drone
+              control station overlapping drone camera images on goggle maps pinpoint delivery of packages.
+            </p>
+            <p>Expectation: Deployment of Drone which could lift heavy weights along with the ability to
+              dismantle any surveillance drone with jammers. Also, drone could be integrated with google with
+              pinpoint accuracy and mapping of device.</p>
+        </li>
+        <li class="problem-statement">
+          <strong>Problem Statement 3: Implementation of AI/ML in the Field of Education</strong>
+          <div class="problem-description">
+            <p><strong>PS (Prelims):</strong> Today our education system faces a lot of issues like lack of
+              proper transportation to school, basic infrastructure, qualified teachers, quality of education,
+              low awareness of importance of education, etc are just a small portion of challenges which holds
+              back the development. Develop an AI/ML model which can tackle these problems and improvise the
+              education system.</p>
+            <p><strong>Expectation:</strong> Create an AI/ML solution that addresses the mentioned challenges in
+              the education system and brings about improvements.</p>
+        </li>
+
+
+        <li class="problem-statement">
+          <strong>Problem Statement 4: IoT Based Smart Waste Management System for Smart City</strong>
+          <div class="problem-description">
+            <p><strong>PS (Prelims):</strong> In the present day scenario, many times we see that the garbage
+              bins or Dust bins placed at public places in the cities are overflowing due to an increase in
+              the waste every day. It creates an unhygienic condition for the people and creates a bad smell
+              around the surroundings that leads to the spread of some deadly diseases & human illness.</p>
+            <p><strong>PS (Mains) Extension:</strong> [Add the extension description for the main round here, if
+              applicable]</p>
+            <p><strong>Expectation:</strong> Design an "IoT Based Waste Management for Smart Cities" which can
+              overcome these problems.</p>
+        </li>
+
+        <li class="problem-statement">
+          <strong>Problem Statement 5: Dark Web/Dark Net</strong>
+          <div class="problem-description">
+            <p>PS (Prelims): Tool that could search for keywords across dark net search engines, along with an
+              alerting mechanism. It must be a simple interface/ Console which must connect to VPN and then
+              help to find the details rather than police searching for websites, links, platforms on dark
+              web. It must also be able to fetch data from different browsers like TOR, TAILS, I2P, Freenet
+              etc. Participants must develop a simple console which automatically latched to a VPN and then
+              connect through Dark Net Browser/Deep Net browser. And then it should be able to filter data
+              based upon keyword, geo location, state, district, date</p>
+            <p>PS (Mains) Extension: Expose IP details of dark net sites & users. Tool which could identify a
+              seller of any product and provide ways to track down the person. It should be able to able to
+              gather/crawl details about all websites, chat rooms, shopping sites & other information related
+              to dark web. It should be a handy intelligence and data collection tool on the dark web.</p>
+            <p>Expectation: A handy tool for dark web intelligence which could help the police in tracking down
+              the websites, gather intelligence and also trace the person, groups involved in any illegal
+              activity. Tool must be able to perform analysis of the gathered information.</p>
+        </li>
+        <li class="problem-statement">
+          <strong>Problem Statement 6: Traffic/Crowd Management</strong>
+          <div class="problem-description">
+            <p>PS (Prelims): Devising smart traffic management system. A real-time console to be developed which
+              will intimate regarding availability of hotel rooms, Heli services availability, other
+              facilities & total people present at Shri Kedarnath Complex. (RFID)/ QR code scanner for
+              real-time check.</p>
+            <p>PS (Mains) Extension: Console to track parking space, traffic jams, AI for alert regarding
+              crowding and how it could be integrated with Google Maps. RFID tagged barrier can be installed
+              to monitor the traffic, number of cars passed, number of people crossed. Even QR code scan
+              technology can also be integrated. All this data to get integrated at a centralized database at
+              district level for better monitoring. Smart signal controller for scheduling signals for a route
+              with congestion reduction and traffic management and route diversion.</p>
+            <p>Expectation: Real-time display of data showing availability for rooms, parking, helicopter
+              service, display of traffic situation- Road jam, parking space etc. this problem is regarding
+              smart tourist management in Kedarnath and other Char Dharm sites</p>
+        </li>
+        <li class="problem-statement">
+          <strong>Problem Statement 7: News Alert/Flash</strong>
+          <div class="problem-description">
+            <p>PS (Prelims): A simple software that includes all major departments dealing with situations like
+              accidents, fire, etc so that once the incident has occurred the concerned departments get
+              details and hence work more efficiently saving time. E.g., somebody reports a fire incident or
+              accident incident then the report must immediately go to the concerning district or police
+              station. These social media tweet text have been mined so as to identify the complaints
+              regarding various road transportation issues of traffic, accident, potholes, garbage, and
+              pollution.</p>
+            <p>PS (Mains) Extension: The tool should work on a flash mechanism method. The accident occurrence
+              should be flashed on screens of concerned authorities. Also, feedback or response action should
+              be timely fed by the concerned. Centralized database to be made all social media accounts/pages
+              are integrated and tracking of complaints can be done. Also, the need for geotagging the place
+              and generating hotspot for specific time of complaint. E.g., one area report for maximum chain
+              snatching complaints. Analytical analysis of social media posts for sentiment prediction.
+              Database of regular habitual offenders on social media Identified profiles-based web crawlers
+              for content and photos</p>
+            <p>Expectation: A mini demonstration from the side of the participants on how news will be flashed,
+              response time to be showed and then a summary report to be generated having basic details.</p>
+        </li>
+        <li class="problem-statement">
+          <strong>Problem Statement 8: Road Safety</strong>
+          <div class="problem-description">
+            <p>PS (Prelims): Smart Pillars or sensors which may use Radio waves to measure the speed of upcoming
+              vehicles and generate the centralized data for over speeding of vehicles. Can be used for
+              automatic Challan for violation. Must develop 04 such pillars for problem extension in the main
+              round.</p>
+            <p>PS (Mains) Extension: Vehicle honk system where Sensors/Smart Pillars will interact with each
+              other, and vehicles will be told about approaching vehicles from the other blind fold end or
+              U-turn in hills. For instance- in a hilly area with a blind curve, both directions vehicle can’t
+              see or gauge whether another vehicle coming in their direction with speed, such sensors based
+              upon speed instantly generate an alert/honking system to alert both drivers</p>
+            <p>Expectation: Road Safety is a big concern for police and such smart sensors/smart pillars will
+              help to reduce accidents. Will be a useful installation where such sensors will alert in both
+              directions regarding the movement of vehicles along with measurement of Speed.</p>
+        </li>
+        <li class="problem-statement">
+          <strong>Problem Statement 9: Intelligence</strong>
+          <div class="problem-description">
+            <p>PS (Prelims): Tool which can horizontally crawl and gather data across different platforms. This
+              search could be based upon mail ID or the mobile number.</p>
+            <p>PS (Mains) Extension: The information is gathered vertically too where details from the deep web
+              and dark web can be found related to a mobile number or email ID.</p>
+            <p>Expectation: Police will be able to crowd source the information from different platforms and
+              instantly develop the profile of the suspected person. E.g., based upon different types of
+              classification.</p>
+        </li>
+        <li class="problem-statement">
+          <strong>Problem Statement 10: Open Ended Problem</strong>
+          <div class="problem-description">
+            <p>PS (Prelims): Any tool/app can be developed which will help to digitalize and modernize the
+              working culture of Police.</p>
+            <p>PS (Mains) Extension: The tool/apps should be robust and platform independent to be easily
+              deployed through a smartphone. It must categorically ease the work of police and give some
+              productive result based upon the coding capability of the team. This problem is open-ended, and
+              all participants have the liberty to code in their area of interest along with its
+              applicability/relevancy for police. Thus, we give an opportunity to students to code if they
+              don’t want to pursue any of the given problem statements but have an idea out of box/new
+              innovative idea.</p>
+            <p>Expectation: Police to get a new state-of-the-art software/tool so as to increase its efficiency
+              & a step towards SMART policing.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const problemStatements = document.querySelectorAll(".problem-statement");
+
+      problemStatements.forEach(statement => {
+        statement.addEventListener("click", () => {
+          statement.classList.toggle("expanded");
+          statement.classList.toggle("active");
+        });
+      });
+    });
+
+
+    // Function to handle window resize
+    function handleResize() {
+      const windowWidth = window.innerWidth;
+
+      // Example: Change background color based on screen width
+      if (windowWidth < 768) {
+        document.body.style.backgroundColor = "#333";
+      } else {
+        document.body.style.backgroundColor = "#111";
+      }
+
+      // You can add more dynamic adjustments here as needed
+    }
+
+    // Attach the resize event listener
+    window.addEventListener("resize", handleResize);
+
+    // Initial call to handleResize to set initial styles
+    handleResize();
+
+ // Function to check if all images are loaded
+ function allImagesLoaded(images) {
+    for (let i = 0; i < images.length; i++) {
+      if (!images[i].complete) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  // Function to display the page when all images are loaded
+  function showPageWhenImagesLoaded() {
+    const images = document.querySelectorAll("img");
+    if (allImagesLoaded(images)) {
+      // All images are loaded, show the page
+      const pageContainer = document.getElementById("page-container");
+      pageContainer.style.display = "block";
+    } else {
+      // Wait and check again in 100 milliseconds
+      setTimeout(showPageWhenImagesLoaded, 100);
+    }
+  }
+
+  // Add an event listener to call the showPageWhenImagesLoaded function
+  window.addEventListener("load", showPageWhenImagesLoaded);
+
+  </script>
+
+
+
+</body>
+
+</html>
